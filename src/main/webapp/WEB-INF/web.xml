@@ -5,11 +5,11 @@
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
     <servlet>
-        <servlet-name>mscoreboard_urls</servlet-name>
+        <servlet-name>msFrontEnd</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>mscoreboard_urls</servlet-name>
+        <servlet-name>msFrontEnd</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 </web-app>
