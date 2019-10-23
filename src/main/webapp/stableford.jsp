@@ -10,7 +10,7 @@
 
 <body>
 
-<h3>${foobar.getTitle()}</h3>
+<h3>${testObject.getDescription()}</h3>
 
 <table class="w3-table-all w3-hoverable">
     <tr>
