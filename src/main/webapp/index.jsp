@@ -1,7 +1,7 @@
 <html>
 <body>
 <h2>Hello World!</h2>
-<form action="/golfer">
+<form action="/url">
     <input type="submit">
 </form>
 </body>
