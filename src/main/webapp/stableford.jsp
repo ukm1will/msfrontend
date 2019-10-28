@@ -10,6 +10,11 @@
 
 <body>
 
+
+<h3>${competitionTitle}</h3>
+<h3>${dateOfCompetition}</h3>
+
+
 <table class="w3-table-all w3-hoverable">
     <tr>
         <th>Position</th>

@@ -35,9 +35,14 @@ public class FrontEndControllers {
 
     @RequestMapping("/view")
     public ModelAndView add(HttpServletRequest request) {
+
+        int viewId = Integer.parseInt(request.getParameter("viewId"));
+        String dateOfCompetition = request.getParameter("dateOfCompetition");
+        String competitionTitle = request.getParameter("competitionTitle");
+
         ModelAndView mv = new ModelAndView();
         RestTemplate restTemplate = new RestTemplate();
-        String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + Integer.parseInt(request.getParameter("viewId"));
+        String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + viewId;
         String json = restTemplate.getForObject(url, String.class);
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<Golfer>>() {
@@ -50,6 +55,8 @@ public class FrontEndControllers {
             mv.setViewName("stableford.jsp");
 
         mv.addObject("golfers", golfers);
+        mv.addObject("competitionTitle", competitionTitle);
+        mv.addObject("dateOfCompetition", dateOfCompetition);
         return mv;
     }
 

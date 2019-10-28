@@ -23,6 +23,8 @@
                 <td>
                     <form action="/view">
                         <input type="hidden" name="viewId" value="${url.getViewId()}">
+                        <input type="hidden" name="dateOfCompetition" value="${url.getDateOfCompetition()}">
+                        <input type="hidden" name="competitionTitle" value="${url.getCompetitionTitle()}">
                         <input type="submit" value="Gross Result">
                     </form>
                 </td>
