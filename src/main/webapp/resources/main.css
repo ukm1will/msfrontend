@@ -6,8 +6,10 @@ h1 {
     color: aqua;
 }
 
-#bolux {
+
+#sb-banner {
     background-color: yellow;
     font-size: x-large;
-    color: red;
+    color: black;
+    text-align: center
 }
