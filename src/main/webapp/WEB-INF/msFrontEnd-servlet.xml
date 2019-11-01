@@ -11,4 +11,8 @@
         http://www.springframework.org/schema/context/spring-context-2.5.xsd">
     <context:annotation-config></context:annotation-config>
     <context:component-scan base-package="controllers"></context:component-scan>
+
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+
 </beans>
+
