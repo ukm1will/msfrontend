@@ -4,11 +4,16 @@
 <html>
 <head>
     <title>Swansea Bay Golf Club</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="<c:url value="/resources/main.css" />" rel="stylesheet">
 </head>
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 <body>
+
+<div id="bolux">Fuck my slut</div>
+
+
+
 <form action="/view">
     <table class="w3-table-all w3-hoverable">
         <tr>
