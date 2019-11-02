@@ -14,6 +14,13 @@
 <h3>${competitionTitle}</h3>
 <h3>${dateOfCompetition}</h3>
 
+<form action="/viewalt">
+    <input type="hidden" name="dateOfCompetition" value="${dateOfCompetition}">
+    <input type="hidden" name="competitionTitle" value="${competitionTitle}">
+    <input type="hidden" name="golfers" value="${golfers}">
+    <input type="submit" value="Alternate Result">
+</form>
+
 
 <table class="w3-table-all w3-hoverable">
     <tr>

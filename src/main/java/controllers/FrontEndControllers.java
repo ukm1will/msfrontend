@@ -34,7 +34,7 @@ public class FrontEndControllers {
     }
 
     @RequestMapping("/view")
-    public ModelAndView add(HttpServletRequest request) {
+    public ModelAndView viewFromURL(HttpServletRequest request) {
 
         int viewId = Integer.parseInt(request.getParameter("viewId"));
         String dateOfCompetition = request.getParameter("dateOfCompetition");
@@ -54,6 +54,24 @@ public class FrontEndControllers {
         else
             mv.setViewName("stableford.jsp");
 
+        mv.addObject("golfers", golfers);
+        mv.addObject("competitionTitle", competitionTitle);
+        mv.addObject("dateOfCompetition", dateOfCompetition);
+        return mv;
+    }
+
+
+    @RequestMapping("/viewalt")
+    public ModelAndView viewFromResult(HttpServletRequest request) {
+
+        String dateOfCompetition = request.getParameter("dateOfCompetition");
+        String competitionTitle = request.getParameter("competitionTitle");
+
+        ModelAndView mv = new ModelAndView();
+
+        String golfers = request.getParameter("golfers");
+
+        mv.setViewName("stableford.jsp");
         mv.addObject("golfers", golfers);
         mv.addObject("competitionTitle", competitionTitle);
         mv.addObject("dateOfCompetition", dateOfCompetition);
