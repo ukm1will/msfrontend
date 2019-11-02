@@ -3,21 +3,45 @@
 
 .center {
     margin: auto;
-    width: 50%;
+    width: 75%;
     padding: 10px;
 }
 
-#results-table th {
-    background-color: blue;
-    border: 2px solid black;
-    width: 50%;
+#outer-div {
+    border: 2px solid red;
+    width: 90%;
 }
 
-#outer-div {
-     background-color: aqua;
-     border: 2px solid red;
-     width: 50%;
- }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+
+#results-table {
+    border: 5px purple;
+}
+
+
+
+/*#results-table th {*/
+    /*!*background-color: blue;*!*/
+    /*border: 2px solid black;*/
+/*}*/
+
 
 
 #sb-banner {
