@@ -35,8 +35,8 @@ public class FrontEndControllers {
         return mv;
     }
 
-    @RequestMapping("/viewsorted")
-    public ModelAndView viewSortedResult(HttpServletRequest request) {
+    @RequestMapping("/viewgross")
+    public ModelAndView viewGrossResult(HttpServletRequest request) {
 
         Competition competition = new Competition();
 
@@ -64,7 +64,7 @@ public class FrontEndControllers {
         if (IsMedalCompetition(competition.golfers.get(0))) {
             mv.setViewName("medal.jsp");
         } else {
-            mv.setViewName("stableford.jsp");
+            mv.setViewName("stableford_gross.jsp");
         }
 
         mv.addObject("golfers", competition.golfers);
@@ -75,8 +75,8 @@ public class FrontEndControllers {
     }
 
 
-    @RequestMapping("/viewunsorted")
-    public ModelAndView viewUnsortedResult(HttpServletRequest request) {
+    @RequestMapping("/viewnett")
+    public ModelAndView viewNettResult(HttpServletRequest request) {
 
         Competition competition = new Competition();
 
@@ -101,7 +101,7 @@ public class FrontEndControllers {
         if (IsMedalCompetition(competition.golfers.get(0))) {
             mv.setViewName("medal.jsp");
         } else {
-            mv.setViewName("stableford.jsp");
+            mv.setViewName("stableford_nett.jsp");
         }
 
         mv.addObject("golfers", competition.golfers);
