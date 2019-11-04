@@ -17,6 +17,8 @@ public class Golfer implements Comparable {
     private String fullName;
     private String[] parts;
 
+
+
     public int getPosition() {
         return position;
     }
