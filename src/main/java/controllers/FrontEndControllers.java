@@ -2,6 +2,7 @@ package controllers;
 
 import gherkin.deps.com.google.gson.Gson;
 import gherkin.deps.com.google.gson.reflect.TypeToken;
+import models.Competition;
 import models.CompetitionMetadata;
 import models.Golfer;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -33,8 +35,10 @@ public class FrontEndControllers {
         return mv;
     }
 
-    @RequestMapping("/view")
-    public ModelAndView viewFromURL(HttpServletRequest request) {
+    @RequestMapping("/viewsorted")
+    public ModelAndView viewSortedResult(HttpServletRequest request) {
+
+        Competition competition = new Competition();
 
         int viewId = Integer.parseInt(request.getParameter("viewId"));
         String dateOfCompetition = request.getParameter("dateOfCompetition");
@@ -42,37 +46,66 @@ public class FrontEndControllers {
 
         ModelAndView mv = new ModelAndView();
         RestTemplate restTemplate = new RestTemplate();
-        String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + viewId;
+
+        // String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + viewId;
+
+        String url = "http://localhost:8080/view/" + viewId;
         String json = restTemplate.getForObject(url, String.class);
+
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<Golfer>>() {
         }.getType();
-        List<Golfer> golfers = gson.fromJson(json, listType);
 
-        if (IsMedalCompetition(golfers.get(0)))
+        competition.golfers = gson.fromJson(json, listType);
+
+        Collections.sort(competition.golfers);
+        competition.updateRankings();
+
+        if (IsMedalCompetition(competition.golfers.get(0))) {
             mv.setViewName("medal.jsp");
-        else
+        } else {
             mv.setViewName("stableford.jsp");
+        }
 
-        mv.addObject("golfers", golfers);
+        mv.addObject("golfers", competition.golfers);
+        mv.addObject("viewId", viewId);
         mv.addObject("competitionTitle", competitionTitle);
         mv.addObject("dateOfCompetition", dateOfCompetition);
         return mv;
     }
 
 
-    @RequestMapping("/viewalt")
-    public ModelAndView viewFromResult(HttpServletRequest request) {
+    @RequestMapping("/viewunsorted")
+    public ModelAndView viewUnsortedResult(HttpServletRequest request) {
 
+        Competition competition = new Competition();
+
+        int viewId = Integer.parseInt(request.getParameter("viewId"));
         String dateOfCompetition = request.getParameter("dateOfCompetition");
         String competitionTitle = request.getParameter("competitionTitle");
 
         ModelAndView mv = new ModelAndView();
+        RestTemplate restTemplate = new RestTemplate();
 
-        String golfers = request.getParameter("golfers");
+        // String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + viewId;
 
-        mv.setViewName("stableford.jsp");
-        mv.addObject("golfers", golfers);
+        String url = "http://localhost:8080/view/" + viewId;
+        String json = restTemplate.getForObject(url, String.class);
+
+        Gson gson = new Gson();
+        Type listType = new TypeToken<ArrayList<Golfer>>() {
+        }.getType();
+
+        competition.golfers = gson.fromJson(json, listType);
+
+        if (IsMedalCompetition(competition.golfers.get(0))) {
+            mv.setViewName("medal.jsp");
+        } else {
+            mv.setViewName("stableford.jsp");
+        }
+
+        mv.addObject("golfers", competition.golfers);
+        mv.addObject("viewId", viewId);
         mv.addObject("competitionTitle", competitionTitle);
         mv.addObject("dateOfCompetition", dateOfCompetition);
         return mv;

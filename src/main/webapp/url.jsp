@@ -10,7 +10,6 @@
 <body>
 <div class="center" id="outer-div">
     <div class="center" id="sb-banner">Swansea Bay - Gross Scores</div>
-    <form action="/view">
         <table class="w3-table-all w3-hoverable">
             <tr>
                 <th>Date</th>
@@ -22,17 +21,16 @@
                     <td>${url.getDateOfCompetition()}</td>
                     <td>${url.getCompetitionTitle()}</td>
                     <td>
-                        <form action="/view">
+                        <form action="/viewsorted">
                             <input type="hidden" name="viewId" value="${url.getViewId()}">
                             <input type="hidden" name="dateOfCompetition" value="${url.getDateOfCompetition()}">
                             <input type="hidden" name="competitionTitle" value="${url.getCompetitionTitle()}">
-                            <input type="submit" value="Gross Result">
+                            <input type="submit" value="View Sorted">
                         </form>
                     </td>
                 </tr>
             </c:forEach>
         </table>
-    </form>
 </div>
 </body>
 </html>

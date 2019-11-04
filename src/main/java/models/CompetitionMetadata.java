@@ -10,7 +10,6 @@ public class CompetitionMetadata {
     private String competitionTitle;
     private int viewId;
 
-
     public void setDateOfCompetition(String dateOfCompetition) {
         this.dateOfCompetition = dateOfCompetition;
     }
