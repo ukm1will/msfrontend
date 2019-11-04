@@ -9,15 +9,11 @@
 
 <body>
 
-<h3>${viewId}</h3>
-<h3>${competitionTitle}</h3>
-<h3>${dateOfCompetition}</h3>
-
 <form action="/viewsorted">
     <input type="hidden" name="viewId" value="${viewId}">
     <input type="hidden" name="dateOfCompetition" value="${dateOfCompetition}">
     <input type="hidden" name="competitionTitle" value="${competitionTitle}">
-    <input type="submit" value="View Sorted">
+    <input type="submit" value="View Gross Result">
 </form>
 
 <table class="w3-table-all w3-hoverable">
