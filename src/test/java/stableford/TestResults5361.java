@@ -26,15 +26,15 @@ public class TestResults5361 {
         assertEquals(STABLEFORD, competition.getScoringSystem());
     }
 
-    @Test
-    public void ShouldAddGolfersToCompetition() {
-        String json = currentDataFile;
-        Gson gson = new Gson();
-        Type listType = new TypeToken<ArrayList<Golfer>>() {
-        }.getType();
-        competition.golfers = gson.fromJson(json, listType);
-        assertEquals(59, competition.golfers.size());
-    }
+//    @Test
+//    public void ShouldAddGolfersToCompetition() {
+//        String json = currentDataFile;
+//        Gson gson = new Gson();
+//        Type listType = new TypeToken<ArrayList<Golfer>>() {
+//        }.getType();
+//        competition.golfers = gson.fromJson(json, listType);
+//        assertEquals(59, competition.golfers.size());
+//    }
 //
 //    @Test
 //    public void GuydonShouldHaveCorrectData() {
