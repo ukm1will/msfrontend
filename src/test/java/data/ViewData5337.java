@@ -1,6 +1,6 @@
 package data;
 
-public class StableFordData5337 {
+public class ViewData5337 {
 
     public static final String JSON = "[" +
             "    {" +

@@ -97,7 +97,14 @@ public class Golfer implements Comparable {
 
     @Override
     public int compareTo(Object obj) {
+
+
         Golfer that = (Golfer) obj;
+
+        System.out.println(String.format("comparing this: %s to that %s\n", this.toString(), that.toString()));
+
+
+
         if (Integer.compare(this.gross, that.gross) == 0) {
             if (this.surname.compareTo(that.surname) == 0) {
                 return this.forename.compareTo(that.forename);

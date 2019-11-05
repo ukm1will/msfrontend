@@ -1,13 +1,11 @@
 package stableford;
 
-import data.StableFordData5337;
-import data.StableFordData5361;
+import data.ViewData5337;
 import gherkin.deps.com.google.gson.Gson;
 import gherkin.deps.com.google.gson.reflect.TypeToken;
 import models.Competition;
 import models.Golfer;
 import org.junit.Test;
-import services.StringHelper;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -16,9 +14,9 @@ import java.util.Collections;
 import static enums.ScoringSystem.STABLEFORD;
 import static org.junit.Assert.assertEquals;
 
-public class TestResults5337 {
+public class View5337 {
 
-    private final String currentDataFile = StableFordData5337.JSON;
+    private final String currentDataFile = ViewData5337.JSON;
     private Competition competition = new Competition(currentDataFile);
 
     @Test
