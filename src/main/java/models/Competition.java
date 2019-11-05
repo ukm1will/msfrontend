@@ -14,7 +14,6 @@ public class Competition {
     private MasterScoreboardFormat masterScoreboardFormat;
     private ScoringSystem scoringSystem;
 
-
     public Competition() {
     }
 
@@ -77,7 +76,7 @@ public class Competition {
     }
 
 
-    private void setScoringSystem(String dataSource) {
+    public void setScoringSystem(String dataSource) {
         if (dataSource.contains("pts"))
             this.scoringSystem = ScoringSystem.STABLEFORD;
         else

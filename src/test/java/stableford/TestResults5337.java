@@ -1,3 +1,5 @@
+package stableford;
+
 import data.StableFordData5337;
 import models.Competition;
 import models.Golfer;
