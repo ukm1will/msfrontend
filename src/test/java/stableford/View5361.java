@@ -10,14 +10,14 @@ import static org.junit.Assert.assertEquals;
 public class View5361 {
 
     private final String currentDataFile = ViewData5361.JSON;
-    private Competition competition = new Competition(currentDataFile);
+//    private Competition competition = new Competition(currentDataFile);
 
-    @Test
-    public void CompetitionShouldBeStableford() {
-        String json = currentDataFile;
-        competition.setScoringSystem(json);
-        assertEquals(STABLEFORD, competition.getScoringSystem());
-    }
+//    @Test
+//    public void CompetitionShouldBeStableford() {
+//        String json = currentDataFile;
+//        competition.setScoringSystem(json);
+//        assertEquals(STABLEFORD, competition.getScoringSystem());
+//    }
 
 //    @Test
 //    public void ShouldAddGolfersToCompetition() {
@@ -61,7 +61,12 @@ public class View5361 {
 //    public void ShouldShowEdnyfedAfterSort() {
 //        String activeData = StringHelper.splitBeforeAndAfter(currentDataFile, beforePart, "Number of Cards Processed");
 //        competition.addResultsToCompetition(activeData);
-//        competition.addGolfersToCompetition();
+//        competition.addGolfersToCompetition();   @Test
+//    public void CompetitionShouldBeStableford() {
+//        String json = currentDataFile;
+//        competition.setScoringSystem(json);
+//        assertEquals(STABLEFORD, competition.getScoringSystem());
+//    }
 //        Collections.sort(competition.golfers);
 //        competition.updateRankings();
 //        Golfer edMorgan = competition.find("Ednyfed O. Morgan");

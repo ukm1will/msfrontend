@@ -21,11 +21,11 @@
                     <td>${url.getDateOfCompetition()}</td>
                     <td>${url.getCompetitionTitle()}</td>
                     <td>
-                        <form action="/viewgross">
+                        <form action="/viewnett">
                             <input type="hidden" name="viewId" value="${url.getViewId()}">
                             <input type="hidden" name="dateOfCompetition" value="${url.getDateOfCompetition()}">
                             <input type="hidden" name="competitionTitle" value="${url.getCompetitionTitle()}">
-                            <input type="submit" value="View Gross Result">
+                            <input type="submit" value="View">
                         </form>
                     </td>
                 </tr>

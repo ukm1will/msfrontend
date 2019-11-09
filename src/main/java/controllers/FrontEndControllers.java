@@ -48,6 +48,10 @@ public class FrontEndControllers {
         RestTemplate restTemplate = new RestTemplate();
 
         String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + viewId;
+
+//        String url = "http://localhost:8080/view/5337";
+
+
         String json = restTemplate.getForObject(url, String.class);
 
         Gson gson = new Gson();
@@ -56,8 +60,8 @@ public class FrontEndControllers {
 
         competition.golfers = gson.fromJson(json, listType);
 
-//        Collections.sort(competition.golfers);
-//        competition.updateRankings();
+        Collections.sort(competition.golfers);
+        competition.updateRankings();
 
         if (IsMedalCompetition(competition.golfers.get(0))) {
             mv.setViewName("medal.jsp");
@@ -86,6 +90,8 @@ public class FrontEndControllers {
         RestTemplate restTemplate = new RestTemplate();
 
         String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + viewId;
+
+//        String url = "http://localhost:8080/view/5337";
         String json = restTemplate.getForObject(url, String.class);
 
         Gson gson = new Gson();
