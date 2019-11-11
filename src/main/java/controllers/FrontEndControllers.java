@@ -48,10 +48,6 @@ public class FrontEndControllers {
         RestTemplate restTemplate = new RestTemplate();
 
         String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + viewId;
-
-//        String url = "http://localhost:8080/view/5337";
-
-
         String json = restTemplate.getForObject(url, String.class);
 
         Gson gson = new Gson();
@@ -90,8 +86,6 @@ public class FrontEndControllers {
         RestTemplate restTemplate = new RestTemplate();
 
         String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + viewId;
-
-//        String url = "http://localhost:8080/view/5337";
         String json = restTemplate.getForObject(url, String.class);
 
         Gson gson = new Gson();

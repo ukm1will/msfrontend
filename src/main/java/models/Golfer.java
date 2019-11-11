@@ -4,8 +4,6 @@ import enums.ScoringSystem;
 
 public class Golfer implements Comparable {
 
-    private String[] partsOfScore;
-    private String[] partsOfName;
 
     private int gross;
     private int nett;
@@ -17,6 +15,10 @@ public class Golfer implements Comparable {
     private String fullName;
     private String[] parts;
     private String placing;
+    private String countback;
+
+    private String[] partsOfScore;
+    private String[] partsOfName;
 
     public String getPlacing() {
         return placing;
@@ -25,8 +27,6 @@ public class Golfer implements Comparable {
     public String getCountback() {
         return countback;
     }
-
-    private String countback;
 
     public int getPosition() {
         return position;
@@ -55,62 +55,6 @@ public class Golfer implements Comparable {
     public int getPts() {
         return pts;
     }
-
-    @Override
-    public String toString() {
-        return "Golfer{" +
-                "position=" + position +
-                ", fullName='" + fullName + '\'' +
-                ", gross=" + gross +
-                ", nett=" + nett +
-                ", handicap=" + handicap +
-                ", pts=" + pts +
-                '}';
-    }
-
-//    public void assignAttributes(ScoringSystem scoringSystem) {
-//        partsOfScore = this.parts[2].split(" ");
-//        handicap = calculateHandicap();
-//        if (scoringSystem == ScoringSystem.STABLEFORD) {
-//            pts = calculatePoints();
-//            gross = calculateGross();
-//        } else if (scoringSystem == ScoringSystem.MEDAL) {
-//            pts = -1;
-//            gross = Integer.parseInt(partsOfScore[0]);
-//        } else {
-//            throw new UnsupportedOperationException("Trouble at mill in Golfer");
-//        }
-//
-//        nett = gross - handicap;
-//        partsOfName = this.parts[1].split(",");
-//
-//        position = Integer.parseInt(parts[0]);
-//        surname = partsOfName[0].trim();
-//        forename = partsOfName[1].trim();
-//
-//        fullName = forename + ' ' + surname;
-//    }
-
-
-//    public int calculateGross() {
-//        int ptsOver36 = this.pts - 36;
-//        int expectedGross = 72 + handicap;
-//        return expectedGross - ptsOver36;
-//    }
-//
-//    private int calculatePoints() {
-//        return Integer.parseInt(partsOfScore[0]);
-//    }
-//
-//    void split(String s) {
-//        this.parts = s.split("\t");
-//    }
-//
-//    private int calculateHandicap() {
-//        partsOfScore[2] = partsOfScore[2].replaceAll("\\(", "");
-//        partsOfScore[2] = partsOfScore[2].replaceAll("\\)", "");
-//        return Integer.parseInt(partsOfScore[2]);
-//    }
 
     @Override
     public int compareTo(Object obj) {
