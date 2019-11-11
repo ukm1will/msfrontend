@@ -9,7 +9,7 @@
 
 <body>
 <div class="center" id="outer-div">
-    <div class="center" id="sb-banner">Swansea Bay - Gross Scores</div>
+    <div class="center" id="sb-banner">Swansea Bay Golf Club Results</div>
         <table class="w3-table-all w3-hoverable">
             <tr>
                 <th>Date</th>
