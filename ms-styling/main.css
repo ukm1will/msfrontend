@@ -1,4 +1,45 @@
-#mydiv {
-    background-color: red;
-    color: yellow;
+
+#comp-date {
+    color: blue;
+    text-align: center;
+
+}
+
+#comp-title {
+    color: brown;
+    text-align: center;
+}
+
+
+#outer-div {
+    border: solid 2px red;
+    width: 50%;
+}
+
+.center {
+    margin: auto;
+    width: 75%;
+    padding: 10px;
+}
+
+#results-table {
+    border: solid 1px lightgrey;
+    width: 100%;
+    text-align: center;
+}
+
+#results-table th {
+    background-color: yellow;
+}
+
+
+#results-table  td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    color: mediumvioletred;
+}
+
+#results-table tr:nth-child(odd) {
+    background-color: #dddddd;
+    color: red;
 }
