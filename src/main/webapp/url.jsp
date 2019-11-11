@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title>Swansea Bay Golf Club</title>
+    <title>SBGC</title>
     <link href="<c:url value="/resources/main.css" />" rel="stylesheet">
 </head>
 

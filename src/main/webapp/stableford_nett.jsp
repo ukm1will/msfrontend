@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title>Swansea Bay Golf Club</title>
+    <title>SBGC</title>
     <link href="<c:url value="/resources/main.css" />" rel="stylesheet">
 </head>
 
@@ -15,6 +15,10 @@
     <input type="hidden" name="competitionTitle" value="${competitionTitle}">
     <input type="submit" value="View Gross Result">
 </form>
+
+<h3 id="comp-title">${competitionTitle}</h3>
+
+<h3 id="comp-date">Competition played on ${dateOfCompetition} at Swansea Bay.</h3>
 
 <table class="w3-table-all w3-hoverable">
     <tr>
