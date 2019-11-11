@@ -1,4 +1,4 @@
-package stableford;
+package selenium;
 
 import org.junit.After;
 import org.junit.Before;
@@ -30,10 +30,9 @@ public class SeleniumTests {
     }
     @Test
     public void ShouldCheckTitle() {
-        driver.get("http://localhost:9090/");
+        driver.get("http://localhost:9090/url");
         driver.manage().window().maximize();
-        assertEquals(driver.getTitle(), "Swansea Bay Golf Club");
-        driver.findElement(By.id("submitbutton")).click();
+        assertEquals(driver.getTitle(), "SBGC");
         driver.findElement(By.cssSelector("tr:nth-child(9) input:nth-child(4)")).click();
         driver.close();
     }
