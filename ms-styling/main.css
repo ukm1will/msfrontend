@@ -1,19 +1,27 @@
 
-#comp-date {
-    color: blue;
+#comp-date, #comp-title {
+    font-size: 18px;
+    font-weight: bold;
     text-align: center;
-
 }
 
 #comp-title {
     color: brown;
+}
+
+#comp-date {
+    color: black;
+}
+
+#comp-net {
+    color: black;
+    font-size: 16px;
     text-align: center;
 }
 
-
 #outer-div {
-    border: solid 2px red;
-    width: 50%;
+    border: aqua;
+    width: 75%;
 }
 
 .center {
@@ -23,23 +31,32 @@
 }
 
 #results-table {
-    border: solid 1px lightgrey;
     width: 100%;
     text-align: center;
+    border: 1px solid grey;
+    cell-padding: 0;
+    cell-spacing: 0;
+    border-collapse: collapse;
 }
 
 #results-table th {
-    background-color: yellow;
+    border: 1px solid grey;
+    font-size: 12px;
+    background-color: #F9E236;
+    color: black;
 }
 
-
-#results-table  td {
-    border: 1px solid #dddddd;
+#results-table td {
+    border: 1px solid grey;
     text-align: left;
-    color: mediumvioletred;
+    color: black;
+    font-size: 11px;
 }
 
 #results-table tr:nth-child(odd) {
+    border: 1px solid grey;
     background-color: #dddddd;
     color: red;
 }
+
+
