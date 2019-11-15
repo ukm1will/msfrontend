@@ -1,50 +1,116 @@
-.center {
-    margin: auto;
-    width: 75%;
-    padding: 10px;
+
+#comp-date, #comp-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#comp-title {
+    color: brown;
+}
+
+#comp-date {
+    color: black;
+}
+
+#comp-type {
+    color: black;
+    font-size: 16px;
+    text-align: center;
 }
 
 #outer-div {
-    border: 2px solid red;
-    width: 90%;
+    width: 75%;
 }
 
+#inner-div {
+    width: 75%;
+}
 
-table {
-    font-family: arial, sans-serif;
+.center {
+    margin: auto;
+    padding: 10px;
+}
+
+#results-table, th, td {
+    border: 1px solid grey;
+    cell-padding: 0;
+    cell-spacing: 0;
     border-collapse: collapse;
+}
+
+#results-table {
     width: 100%;
 }
 
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+#results-table th {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: #F9E236;
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
-tr:nth-child(even) {
+#results-table td {
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+#results-table tr:nth-child(odd) {
+    border: 1px solid grey;
     background-color: #dddddd;
 }
 
 
-
-#results-table {
-    border: 5px purple;
+.col-brown-bold {
+    color: saddlebrown;
+    font-weight: bold;
 }
 
-
-
-/*#results-table th {*/
-/*!*background-color: blue;*!*/
-/*border: 2px solid black;*/
-/*}*/
-
-
-
-#sb-banner {
-    background-color: yellow;
-    font-size: x-large;
-    color: black;
+.col-overall-position {
     text-align: center;
-    width: 50%;
+    width: 8%;
 }
+
+.col-placing {
+    font-family: sans-serif;
+    font-size: 10px;
+}
+.col-countback {
+    font-family: sans-serif;
+    font-size: 9px;
+}
+
+.alt-score-div {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.alt-score-button {
+    box-shadow:inset 0px 1px 0px 0px #54a3f7;
+    background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+    background-color:#007dc1;
+    border-radius:3px;
+    border:1px solid #124d77;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family: Arial, sans-serif;
+    font-size:13px;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #154682;
+}
+.alt-score-button:hover {
+    background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+    background-color:#0061a7;
+}
+
+.alt-score-button:active {
+    position:relative;
+    top:1px;
+}
+

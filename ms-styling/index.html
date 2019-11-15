@@ -1,16 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <title>SBGC</title>
     <link href="main.css" rel="stylesheet">
-    <title>Testing Styles</title>
 </head>
 <body>
+
 <div class="center" id="outer-div">
     <p id="comp-title">Club Stableford</p>
-    <p id="comp-date">Competition played on Sun 20 Oct 19 at Swansea Bay</p>
+    <p id="comp-date">Competition played on Sun 20 Oct 19 at Swansea Bay.</p>
     <p id="comp-net">Full Net Result</p>
-    <div class="center" id="table-div">
+    <div class="center" id="inner-div">
+        <div class="alt-score-div">
+            <form action="/viewgross">
+                <input type="hidden" name="viewId" value="5361">
+                <input type="hidden" name="dateOfCompetition" value="Sun 20 Oct 19">
+                <input type="hidden" name="competitionTitle" value="Club Stableford">
+                <input type="submit" class="alt-score-button" value="View Gross Result">
+            </form>
+        </div>
         <table id="results-table">
             <tr>
                 <th>Overall Position</th>
@@ -19,22 +26,482 @@
                 <th>Placing</th>
                 <th>Countback</th>
             </tr>
+
             <tr>
-                <td>1</td>
-                <td>John P Murphy</td>
-                <td>38 pts (12)</td>
-                <td>Overall Winner</td>
-                <td></td>
+                <td class="col-overall-position">1</td>
+                <td class="col-brown-bold">John P Murphy</td>
+                <td class="col-brown-bold">38 pts (12)</td>
+                <td class="col-placing">Overall Winner</td>
+                <td class="col-countback"></td>
             </tr>
+
             <tr>
-                <td>2</td>
-                <td>Paul Williams</td>
-                <td>36 pts (15)</td>
-                <td>Overall Runner-Up</td>
-                <td>Last Three Holes</td>
+                <td class="col-overall-position">2</td>
+                <td class="col-brown-bold">Paul Williams</td>
+                <td class="col-brown-bold">36 pts (15)</td>
+                <td class="col-placing">Overall Runner-Up</td>
+                <td class="col-countback">Last Three Holes</td>
             </tr>
+
+            <tr>
+                <td class="col-overall-position">3</td>
+                <td class="col-brown-bold">Christopher Smith</td>
+                <td class="col-brown-bold">36 pts (5)</td>
+                <td class="col-placing">Overall 3rd</td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">4</td>
+                <td class="col-brown-bold">Gary Flack</td>
+                <td class="col-brown-bold">36 pts (18)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Six Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">5</td>
+                <td class="col-brown-bold">Stephen Drewson</td>
+                <td class="col-brown-bold">36 pts (13)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">6</td>
+                <td class="col-brown-bold">Chris Holwill</td>
+                <td class="col-brown-bold">36 pts (11)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">7</td>
+                <td class="col-brown-bold">Jeff Phillipart</td>
+                <td class="col-brown-bold">35 pts (11)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">8</td>
+                <td class="col-brown-bold">Karl Fisher</td>
+                <td class="col-brown-bold">35 pts (4)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Six Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">9</td>
+                <td class="col-brown-bold">R. A. Evans</td>
+                <td class="col-brown-bold">35 pts (1)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Six Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">10</td>
+                <td class="col-brown-bold">Andrew S. Millard</td>
+                <td class="col-brown-bold">35 pts (16)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">11</td>
+                <td class="col-brown-bold">Chris M Doyle</td>
+                <td class="col-brown-bold">35 pts (9)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">12</td>
+                <td class="col-brown-bold">Bryan Ashford</td>
+                <td class="col-brown-bold">35 pts (4)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Six Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">13</td>
+                <td class="col-brown-bold">Billy J. James</td>
+                <td class="col-brown-bold">35 pts (6)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">14</td>
+                <td class="col-brown-bold">Paul Thomas</td>
+                <td class="col-brown-bold">35 pts (9)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">15</td>
+                <td class="col-brown-bold">Michael Thacker</td>
+                <td class="col-brown-bold">34 pts (21)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">16</td>
+                <td class="col-brown-bold">Darren Wood</td>
+                <td class="col-brown-bold">34 pts (13)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Six Holes - Front 9</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">17</td>
+                <td class="col-brown-bold">Mike Grieves</td>
+                <td class="col-brown-bold">34 pts (0)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">18</td>
+                <td class="col-brown-bold">Steve Veckman</td>
+                <td class="col-brown-bold">34 pts (10)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">19</td>
+                <td class="col-brown-bold">Mike J Miles</td>
+                <td class="col-brown-bold">34 pts (14)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">20</td>
+                <td class="col-brown-bold">D Jonathan Davies</td>
+                <td class="col-brown-bold">34 pts (18)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">21</td>
+                <td class="col-brown-bold">Nigel Bevan</td>
+                <td class="col-brown-bold">33 pts (5)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">22</td>
+                <td class="col-brown-bold">Damien Miller</td>
+                <td class="col-brown-bold">33 pts (18)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">23</td>
+                <td class="col-brown-bold">Michael M Linnane</td>
+                <td class="col-brown-bold">33 pts (6)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Three Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">24</td>
+                <td class="col-brown-bold">John Griffiths</td>
+                <td class="col-brown-bold">33 pts (11)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Three Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">25</td>
+                <td class="col-brown-bold">Rob H. Hornblower</td>
+                <td class="col-brown-bold">33 pts (12)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">26</td>
+                <td class="col-brown-bold">Dave Jeffreys</td>
+                <td class="col-brown-bold">33 pts (9)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">27</td>
+                <td class="col-brown-bold">Martin Ford</td>
+                <td class="col-brown-bold">32 pts (5)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">28</td>
+                <td class="col-brown-bold">Christopher Stephens</td>
+                <td class="col-brown-bold">32 pts (6)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Three Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">29</td>
+                <td class="col-brown-bold">Craig Kendall</td>
+                <td class="col-brown-bold">32 pts (6)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">30</td>
+                <td class="col-brown-bold">David Rees</td>
+                <td class="col-brown-bold">32 pts (22)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Six Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">31</td>
+                <td class="col-brown-bold">Gareth Carpenter</td>
+                <td class="col-brown-bold">32 pts (16)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">32</td>
+                <td class="col-brown-bold">Kyle Williams</td>
+                <td class="col-brown-bold">32 pts (4)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Three Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">33</td>
+                <td class="col-brown-bold">Marc Evans</td>
+                <td class="col-brown-bold">32 pts (14)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Three Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">34</td>
+                <td class="col-brown-bold">D. Roy Jones</td>
+                <td class="col-brown-bold">32 pts (9)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">35</td>
+                <td class="col-brown-bold">Richard Christensen</td>
+                <td class="col-brown-bold">32 pts (23)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">36</td>
+                <td class="col-brown-bold">Peter Allen</td>
+                <td class="col-brown-bold">31 pts (14)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">37</td>
+                <td class="col-brown-bold">Ceri Rees</td>
+                <td class="col-brown-bold">31 pts (13)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">38</td>
+                <td class="col-brown-bold">Mike J. Lewis</td>
+                <td class="col-brown-bold">31 pts (12)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">39</td>
+                <td class="col-brown-bold">Mark O'Sullivan</td>
+                <td class="col-brown-bold">30 pts (15)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">40</td>
+                <td class="col-brown-bold">Alan Lewis</td>
+                <td class="col-brown-bold">30 pts (14)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">41</td>
+                <td class="col-brown-bold">Kerry Jones</td>
+                <td class="col-brown-bold">29 pts (13)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">42</td>
+                <td class="col-brown-bold">Roy Duffy</td>
+                <td class="col-brown-bold">29 pts (10)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">43</td>
+                <td class="col-brown-bold">Mathew Mittell</td>
+                <td class="col-brown-bold">29 pts (7)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">44</td>
+                <td class="col-brown-bold">Chris M Bailey</td>
+                <td class="col-brown-bold">28 pts (11)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">45</td>
+                <td class="col-brown-bold">Alan Greenow</td>
+                <td class="col-brown-bold">28 pts (19)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Six Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">46</td>
+                <td class="col-brown-bold">Lee Parker</td>
+                <td class="col-brown-bold">28 pts (23)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Three Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">47</td>
+                <td class="col-brown-bold">Michael George</td>
+                <td class="col-brown-bold">28 pts (18)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">48</td>
+                <td class="col-brown-bold">Ian Scannell</td>
+                <td class="col-brown-bold">28 pts (20)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">49</td>
+                <td class="col-brown-bold">Nigel Lovering</td>
+                <td class="col-brown-bold">27 pts (13)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">50</td>
+                <td class="col-brown-bold">Karl Williams</td>
+                <td class="col-brown-bold">27 pts (10)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">51</td>
+                <td class="col-brown-bold">Carl Hook</td>
+                <td class="col-brown-bold">27 pts (12)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">52</td>
+                <td class="col-brown-bold">Ellis Thomas</td>
+                <td class="col-brown-bold">27 pts (10)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">53</td>
+                <td class="col-brown-bold">Mike Edwards</td>
+                <td class="col-brown-bold">26 pts (6)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">54</td>
+                <td class="col-brown-bold">Huw Parry</td>
+                <td class="col-brown-bold">26 pts (12)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback">Last Nine Holes</td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">55</td>
+                <td class="col-brown-bold">Marc Jones</td>
+                <td class="col-brown-bold">26 pts (6)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">56</td>
+                <td class="col-brown-bold">Lester H McCalmon</td>
+                <td class="col-brown-bold">24 pts (8)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">57</td>
+                <td class="col-brown-bold">Glanville D Moule</td>
+                <td class="col-brown-bold">23 pts (13)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">58</td>
+                <td class="col-brown-bold">David Northcott</td>
+                <td class="col-brown-bold">22 pts (14)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
+            <tr>
+                <td class="col-overall-position">59</td>
+                <td class="col-brown-bold">Jeff Alan Thomas</td>
+                <td class="col-brown-bold">17 pts (21)</td>
+                <td class="col-placing"></td>
+                <td class="col-countback"></td>
+            </tr>
+
         </table>
     </div>
 </div>
 </body>
 </html>
+

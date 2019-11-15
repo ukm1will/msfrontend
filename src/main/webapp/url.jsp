@@ -21,7 +21,7 @@
                     <td>${url.getDateOfCompetition()}</td>
                     <td>${url.getCompetitionTitle()}</td>
                     <td>
-                        <form action="/viewnett">
+                        <form action="/viewnet">
                             <input type="hidden" name="viewId" value="${url.getViewId()}">
                             <input type="hidden" name="dateOfCompetition" value="${url.getDateOfCompetition()}">
                             <input type="hidden" name="competitionTitle" value="${url.getCompetitionTitle()}">

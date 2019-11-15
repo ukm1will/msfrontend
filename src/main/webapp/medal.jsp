@@ -15,7 +15,7 @@
         <th>Position</th>
         <th>Name</th>
         <th>Gross</th>
-        <th>Nett</th>
+        <th>Net</th>
         <th>Handicap</th>
     </tr>
     <c:forEach var="golfer" items="${golfers}">

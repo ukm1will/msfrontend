@@ -9,7 +9,7 @@
 
 <body>
 
-<form action="/viewnett">
+<form action="/viewnet">
     <input type="hidden" name="viewId" value="${viewId}">
     <input type="hidden" name="dateOfCompetition" value="${dateOfCompetition}">
     <input type="hidden" name="competitionTitle" value="${competitionTitle}">

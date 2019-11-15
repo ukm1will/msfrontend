@@ -24,7 +24,7 @@ public class FrontEndControllers {
     public ModelAndView getURIs() {
         ModelAndView mv = new ModelAndView();
         RestTemplate restTemplate = new RestTemplate();
-        String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/url";
+        String url = "http://localhost:8080/url";
         String json = restTemplate.getForObject(url, String.class);
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<CompetitionMetadata>>() {
@@ -47,7 +47,7 @@ public class FrontEndControllers {
         ModelAndView mv = new ModelAndView();
         RestTemplate restTemplate = new RestTemplate();
 
-        String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + viewId;
+        String url = "http://localhost:8080/view/" + viewId;
         String json = restTemplate.getForObject(url, String.class);
 
         Gson gson = new Gson();
@@ -73,7 +73,7 @@ public class FrontEndControllers {
     }
 
 
-    @RequestMapping("/viewnett")
+    @RequestMapping("/viewnet")
     public ModelAndView viewNettResult(HttpServletRequest request) {
 
         Competition competition = new Competition();
@@ -85,7 +85,7 @@ public class FrontEndControllers {
         ModelAndView mv = new ModelAndView();
         RestTemplate restTemplate = new RestTemplate();
 
-        String url = "http://msbackend.wkftwqs2fz.eu-west-2.elasticbeanstalk.com/view/" + viewId;
+        String url = "http://localhost:8080/view/" + viewId;
         String json = restTemplate.getForObject(url, String.class);
 
         Gson gson = new Gson();
