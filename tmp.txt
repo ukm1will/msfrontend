@@ -1,0 +1,42 @@
+
+
+
+<link href="<c:url value="/resources/main.css" />" rel="stylesheet">
+
+http://localhost:9090/resources/main.css
+
+
+
+http://localhost:63342/msFrontEnd/ms-styling/index.html
+
+includes resource:
+
+<link href="main.css" rel="stylesheet">
+
+I reckon we need:
+
+<link href="main.css" rel="stylesheet">
+
+
+
+
+ which relates to:
+
+http://localhost:63342/msFrontEnd/ms-styling/main.css
+
+
+
+
+therefore:
+
+http://localhost:63342/msFrontEnd/src/main/webapp/resources/main.css
+
+should include resource:
+
+
+
+relates to:
+
+
+/home/ukmiwill/msfrontend/src/main/webapp/resources
+

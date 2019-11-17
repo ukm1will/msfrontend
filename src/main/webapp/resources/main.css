@@ -83,6 +83,11 @@
     font-size: 9px;
 }
 
+.col-lighter {
+    color: #9da2ca;
+}
+
+
 .alt-score-div {
     text-align: center;
     padding-top: 10px;
