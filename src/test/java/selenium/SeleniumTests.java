@@ -8,7 +8,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -33,12 +35,14 @@ public class SeleniumTests {
     @Test
     public void firstTest() {
         driver.get("http://localhost:9090/url");
-        assertThat(driver.getTitle(), is("SBGC"));
-        driver.findElement(By.cssSelector("tr:nth-child(13) input:nth-child(4)")).click();
-        assertThat(driver.getTitle(), is("SBGC"));
-        driver.findElement(By.cssSelector("tr:nth-child(2) > .col-brown-bold:nth-child(2)")).click();
-        assertThat(driver.findElement(By.cssSelector("tr:nth-child(2) > .col-brown-bold:nth-child(2)")).getText(), is("John P Murphy"));
-        driver.findElement(By.cssSelector("tr:nth-child(2) > .col-brown-bold:nth-child(3)")).click();
-        assertThat(driver.findElement(By.cssSelector("tr:nth-child(2) > .col-brown-bold:nth-child(3)")).getText(), is("38 pts (12)"));
+
+        WebElement selectElement = driver.findElement(By.id("results-table"));
+
+        Select select = new Select(selectElement);
+
+        select.selectByVisibleText("Sun 20 Oct 19");
+
+
+
     }
 }
