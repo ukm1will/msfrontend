@@ -24,7 +24,7 @@ public class SeleniumTests {
     @Before
     public void setUp() {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
     }
 
     @After
@@ -34,15 +34,27 @@ public class SeleniumTests {
 
     @Test
     public void firstTest() {
-        driver.get("http://localhost:9090/url");
+        driver.get("http://localhost:63342/msFrontEnd/ms-styling/index.html?_ijt=86ramffi8g4jnhro5fbrb1c2e1");
 
-        WebElement selectElement = driver.findElement(By.id("results-table"));
+        // WebElement selectElement = driver.findElement(By.id("results-table"));
 
-        Select select = new Select(selectElement);
+        WebElement urlTable = driver.findElement(By.tagName("table"));
 
-        select.selectByVisibleText("Sun 20 Oct 19");
+        WebElement cellThatHoldsForm = urlTable.findElements(By.tagName("td")).get(2);
+
+        WebElement formThatHoldsData = cellThatHoldsForm.findElements(By.tagName("form")).get(0);
+
+        WebElement inputType = formThatHoldsData.findElement(By.name("viewId"));
+
+        System.out.println(inputType.getAttribute("value"));
+
+//        System.out.println(cellThatHoldsForm.getText());
 
 
+//        WebElement rowZero = urlTable.findElements(By.tagName("td")).get(0);
+//        WebElement rowOne = urlTable.findElements(By.tagName("td")).get(1);
+//
+//        System.out.println(String.format("%s %s", rowZero.getText(), rowOne.getText()));
 
     }
 }
