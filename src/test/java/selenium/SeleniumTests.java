@@ -8,13 +8,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
 
 
 public class SeleniumTests {
@@ -36,25 +32,26 @@ public class SeleniumTests {
     public void firstTest() {
         driver.get("http://localhost:63342/msFrontEnd/ms-styling/index.html?_ijt=86ramffi8g4jnhro5fbrb1c2e1");
 
-        // WebElement selectElement = driver.findElement(By.id("results-table"));
-
         WebElement urlTable = driver.findElement(By.tagName("table"));
 
-        WebElement cellThatHoldsForm = urlTable.findElements(By.tagName("td")).get(2);
+        List<WebElement> rowsInTable = urlTable.findElements(By.tagName("tr"));
+        List<WebElement> tddsInRow;
+        StringBuilder sb = new StringBuilder();
 
-        WebElement formThatHoldsData = cellThatHoldsForm.findElements(By.tagName("form")).get(0);
+        WebElement tddElementWithFormElement;
+        WebElement formElementWithInputElements;
+        WebElement inputElementNamedViewId;
 
-        WebElement inputType = formThatHoldsData.findElement(By.name("viewId"));
-
-        System.out.println(inputType.getAttribute("value"));
-
-//        System.out.println(cellThatHoldsForm.getText());
-
-
-//        WebElement rowZero = urlTable.findElements(By.tagName("td")).get(0);
-//        WebElement rowOne = urlTable.findElements(By.tagName("td")).get(1);
-//
-//        System.out.println(String.format("%s %s", rowZero.getText(), rowOne.getText()));
-
+        for (WebElement row : rowsInTable) {
+            tddsInRow = row.findElements(By.tagName("td"));
+            if (tddsInRow.size() == 3) {
+                tddElementWithFormElement = row.findElements(By.tagName("td")).get(2);
+                formElementWithInputElements = tddElementWithFormElement.findElement(By.tagName("form"));
+                inputElementNamedViewId = formElementWithInputElements.findElement(By.name("viewId"));
+                sb.append(inputElementNamedViewId.getAttribute("value"));
+                sb.append("\n");
+            }
+        }
+        System.out.println(sb.toString());
     }
 }
