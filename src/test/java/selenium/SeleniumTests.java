@@ -35,23 +35,59 @@ public class SeleniumTests {
         WebElement urlTable = driver.findElement(By.tagName("table"));
 
         List<WebElement> rowsInTable = urlTable.findElements(By.tagName("tr"));
+
         List<WebElement> tddsInRow;
+
         StringBuilder sb = new StringBuilder();
 
         WebElement tddElementWithFormElement;
         WebElement formElementWithInputElements;
-        WebElement inputElementNamedViewId;
+        WebElement inputViewId = null;
+        WebElement foundButton = null;
+
+        int countLoops = 0;
+
+        String viewId = "";
 
         for (WebElement row : rowsInTable) {
             tddsInRow = row.findElements(By.tagName("td"));
             if (tddsInRow.size() == 3) {
+                countLoops++;
+                // We are only interested in rows that have 3 cells. Once we find such a row, we need to look at the form within this cell
                 tddElementWithFormElement = row.findElements(By.tagName("td")).get(2);
                 formElementWithInputElements = tddElementWithFormElement.findElement(By.tagName("form"));
-                inputElementNamedViewId = formElementWithInputElements.findElement(By.name("viewId"));
-                sb.append(inputElementNamedViewId.getAttribute("value"));
-                sb.append("\n");
+
+                // In the form we need the element with the viewId and the element with the submit button
+                inputViewId = formElementWithInputElements.findElement(By.name("viewId"));
+
+                viewId = inputViewId.getAttribute("value");
+
+                if (viewId.equals("5361"))
+                    foundButton = formElementWithInputElements.findElement(By.name("button"));
             }
+            if(foundButton != null)
+                break;
         }
-        System.out.println(sb.toString());
+
+        foundButton.click();
+
+        System.out.println(String.format("Value of button is %s, number of loops is %d", viewId, countLoops));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
