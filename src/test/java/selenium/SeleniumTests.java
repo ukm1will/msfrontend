@@ -30,7 +30,7 @@ public class SeleniumTests {
 
     @Test
     public void firstTest() {
-        driver.get("http://localhost:63342/msFrontEnd/ms-styling/index.html?_ijt=86ramffi8g4jnhro5fbrb1c2e1");
+        driver.get("http://localhost:63342/msFrontEnd/ms-styling/index.html");
 
         WebElement urlTable = driver.findElement(By.tagName("table"));
 
@@ -53,6 +53,7 @@ public class SeleniumTests {
             tddsInRow = row.findElements(By.tagName("td"));
             if (tddsInRow.size() == 3) {
                 countLoops++;
+
                 // We are only interested in rows that have 3 cells. Once we find such a row, we need to look at the form within this cell
                 tddElementWithFormElement = row.findElements(By.tagName("td")).get(2);
                 formElementWithInputElements = tddElementWithFormElement.findElement(By.tagName("form"));
@@ -62,8 +63,8 @@ public class SeleniumTests {
 
                 viewId = inputViewId.getAttribute("value");
 
-                if (viewId.equals("5361"))
-                    foundButton = formElementWithInputElements.findElement(By.name("button"));
+                if (viewId.equals("5370"))
+                    foundButton = formElementWithInputElements.findElement(By.name("submitButton"));
             }
             if(foundButton != null)
                 break;
